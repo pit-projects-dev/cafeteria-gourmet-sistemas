@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f9f6f0;
+    color: #333;
+}
+header {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+#btn-carrinho {
+    background-color: #d4a373;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #e6ccb2;
+}
+.hero h1 {
+    color: #4a2c2a;
+    margin-bottom: 0.5rem;
+}
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+.filtros button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #4a2c2a;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.filtros button:hover {
+    background: #4a2c2a;
+    color: white;
+}
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.cartao-produto {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.cartao-produto h3 {
+    margin: 0.5rem 0;
+    color: #4a2c2a;
+}
+.cartao-produto button {
+    background-color: #4a2c2a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.conteudo-modal {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+.fechar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.btn-finalizar {
+    background-color: #2b9348;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.pix-box {
+    text-align: center;
+}
+.qr-fake {
+    font-size: 20px;
+    background: #eee;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+/* Painel Lojista */
+.painel-lojista {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.tabela-pedidos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.tabela-pedidos th, .tabela-pedidos td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.tabela-pedidos th {
+    background-color: #4a2c2a;
+    color: white;
+}
