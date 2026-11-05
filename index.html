@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria Gourmet - E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">☕ Cafeteria Gourmet</div>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <button id="btn-carrinho" onclick="abrirCarrinho()">🛒 Carrinho (<span id="contador-carrinho">0</span>)</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O melhor café artesanal direto para você</h1>
+        <p>Escolha seus itens favoritos, faça o pedido de forma simples e pague com PIX.</p>
+    </section>
+
+    <main id="cardapio">
+        <h2>Nosso Cardápio</h2>
+        <div class="filtros">
+            <button onclick="filtrarProdutos('todos')">Todos</button>
+            <button onclick="filtrarProdutos('cafe')">Cafés</button>
+            <button onclick="filtrarProdutos('doce')">Doces</button>
+            <button onclick="filtrarProdutos('salgado')">Salgados</button>
+        </div>
+
+        <div class="grade-produtos" id="grade-produtos">
+            <!-- Produtos injetados via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal do Carrinho -->
+    <div id="modal-carrinho" class="modal">
+        <div class="conteudo-modal">
+            <span class="fechar" onclick="fecharCarrinho()">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="itens-carrinho"></div>
+            <p><strong>Total: R$ <span id="valor-total">0.00</span></strong></p>
+            <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar Pedido via PIX</button>
+        </div>
+    </div>
+
+    <!-- Modal de Pagamento PIX -->
+    <div id="modal-pix" class="modal">
+        <div class="conteudo-modal pix-box">
+            <span class="fechar" onclick="fecharPix()">&times;</span>
+            <h2>Pagamento via PIX</h2>
+            <p>Escaneie o QR Code abaixo ou copie a chave PIX:</p>
+            <div class="qr-fake">📱 [QR CODE PIX SIMULADO]</div>
+            <p class="chave-pix">Chave: <code>cafe-gourmet-pix@sistema.com</code></p>
+            <button onclick="confirmarPagamento()" class="btn-finalizar">Já fiz o pagamento</button>
+        </div>
+    </div>
+
+    <!-- Painel Administrativo do Lojista -->
+    <section class="painel-lojista">
+        <h2>Painel de Controle do Lojista (Pedidos em Tempo Real)</h2>
+        <table class="tabela-pedidos">
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Itens</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-pedidos-corpo">
+                <tr>
+                    <td colspan="4" style="text-align: center;">Nenhum pedido recente.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Cafeteria Gourmet - Projeto PIT II - Sistemas de Informação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
